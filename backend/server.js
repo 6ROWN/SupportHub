@@ -20,7 +20,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 // Enable CORS middleware
 app.use(function (req, res, next) {
-	res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // Allow requests from localhost:3000
+	res.header(
+		"Access-Control-Allow-Origin",
+		"http://localhost:5173",
+		"https://supporthub.onrender.com/"
+	); // Allow requests from localhost:3000
 	res.header(
 		"Access-Control-Allow-Headers",
 		"Origin, X-Requested-With, Content-Type, Accept"
