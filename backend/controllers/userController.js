@@ -94,7 +94,13 @@ const loginUser = asyncHandler(async (req, res) => {
 	const token = generateToken(user._id);
 	return res
 		.status(200)
-		.json({ _id: user._id, name: user.name, email: user.email, token });
+		.json({
+			_id: user._id,
+			firstName: user.firstName,
+			lastName: user.lastName,
+			email: user.email,
+			token,
+		});
 });
 
 // Function to generate a JWT token
